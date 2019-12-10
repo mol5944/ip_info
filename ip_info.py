@@ -15,6 +15,7 @@ for i in soup.find_all('ul',class_="address-list")[1].find_all('li'):
     print(i.find_all('span')[0].get_text().strip() + ': ' + i.find_all('span')[1].get_text().strip())
 
 if 'There are 0 domain names hosted on this IP address.' in resp.text:
+    print('########################################')
     quit()
 else:
     print('/****************************************/')
